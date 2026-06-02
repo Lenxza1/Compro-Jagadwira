@@ -2,6 +2,7 @@
 
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
+import Link from 'next/link';
 
 export default function CTASection() {
   return (
@@ -48,11 +49,13 @@ export default function CTASection() {
 
             {/* Right Action Button */}
             <div className="lg:col-span-4 flex lg:justify-end">
-              <Button className="bg-[#0052e0] hover:bg-[#0041b3] text-white rounded-full pl-6 pr-2 py-6 font-bold flex items-center gap-3 transition duration-300 shadow-lg shadow-blue-500/20">
-                Konsultasi Gratis Sekarang
-                <div className="bg-white text-[#0052e0] p-1.5 rounded-full flex items-center justify-center">
-                  <ArrowRight className="w-3.5 h-3.5" />
-                </div>
+              <Button asChild className="bg-[#0052e0] hover:bg-[#0041b3] text-white rounded-full pl-6 pr-2 py-6 font-bold flex items-center gap-3 transition duration-300 shadow-lg shadow-blue-500/20">
+                <Link href="/contact">
+                  Konsultasi Gratis Sekarang
+                  <div className="bg-white text-[#0052e0] p-1.5 rounded-full flex items-center justify-center inline-flex ml-2">
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </div>
+                </Link>
               </Button>
             </div>
           </div>

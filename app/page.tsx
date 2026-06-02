@@ -1,6 +1,7 @@
 import Header from '@/components/header';
 import Hero from '@/components/hero';
 import Features from '@/components/features';
+import About from '@/components/about';
 import Services from '@/components/services';
 import Statistics from '@/components/statistics';
 import Portfolio from '@/components/portfolio';
@@ -14,9 +15,10 @@ export default function Home() {
       <Header />
       <Hero />
       <Features />
+      <About />
       <Services />
+      <Portfolio viewAllHref="/portfolio" />
       <Statistics />
-      <Portfolio />
       <Process />
       <CTASection />
       <Footer />

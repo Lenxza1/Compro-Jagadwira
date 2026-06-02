@@ -61,27 +61,27 @@ export default function Footer() {
             <h3 className="font-bold text-sm tracking-wider uppercase text-white">Layanan</h3>
             <ul className="space-y-3 text-slate-400 font-medium text-sm">
               <li>
-                <Link href="#" className="hover:text-white transition">
+                <Link href="/#services" className="hover:text-white transition">
                   Website Company Profile
                 </Link>
               </li>
               <li>
-                <Link href="#" className="hover:text-white transition">
+                <Link href="/#services" className="hover:text-white transition">
                   Website E-Commerce
                 </Link>
               </li>
               <li>
-                <Link href="#" className="hover:text-white transition">
+                <Link href="/#services" className="hover:text-white transition">
                   Custom Development
                 </Link>
               </li>
               <li>
-                <Link href="#" className="hover:text-white transition">
+                <Link href="/#services" className="hover:text-white transition">
                   SEO Optimization
                 </Link>
               </li>
               <li>
-                <Link href="#" className="hover:text-white transition">
+                <Link href="/#services" className="hover:text-white transition">
                   Maintenance & Support
                 </Link>
               </li>
@@ -93,27 +93,22 @@ export default function Footer() {
             <h3 className="font-bold text-sm tracking-wider uppercase text-white">Perusahaan</h3>
             <ul className="space-y-3 text-slate-400 font-medium text-sm">
               <li>
-                <Link href="#" className="hover:text-white transition">
+                <Link href="/#about" className="hover:text-white transition">
                   Tentang Kami
                 </Link>
               </li>
               <li>
-                <Link href="#" className="hover:text-white transition">
+                <Link href="/#portfolio" className="hover:text-white transition">
                   Portofolio
                 </Link>
               </li>
               <li>
-                <Link href="#" className="hover:text-white transition">
-                  Blog
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="hover:text-white transition">
+                <Link href="/#careers" className="hover:text-white transition">
                   Karir
                 </Link>
               </li>
               <li>
-                <Link href="#" className="hover:text-white transition">
+                <Link href="/contact" className="hover:text-white transition">
                   Kontak
                 </Link>
               </li>
@@ -157,7 +152,7 @@ export default function Footer() {
         <div className="border-t border-white/5 pt-8">
           {/* Copyright */}
           <div className="text-center text-slate-500 text-xs sm:text-sm font-medium">
-            <p>&copy; 2024 Jagadwira Tech. All Rights Reserved.</p>
+            <p>&copy; 2026 Jagadwira Tech. All Rights Reserved.</p>
           </div>
         </div>
 

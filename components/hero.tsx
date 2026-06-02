@@ -3,12 +3,13 @@
 import { Button } from '@/components/ui/button';
 import { Play, ArrowRight } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Hero() {
   return (
     <section className="relative py-12 md:py-20 lg:py-24 overflow-hidden bg-white">
       {/* Background glow effects */}
-      <div className="absolute right-0 top-0 w-[500px] h-[500px] bg-blue-50/50 rounded-full blur-3xl -z-10" />
+      <div className="absolute right-0 top-0 w-[500px] h-[500px] bg-blue-50/55 rounded-full blur-3xl -z-10" />
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -28,21 +29,26 @@ export default function Hero() {
 
             {/* CTA Buttons */}
             <div className="flex flex-wrap gap-4 pt-2">
-              <Button className="bg-[#0052e0] hover:bg-[#0041b3] text-white rounded-full pl-6 pr-2 py-6 font-bold flex items-center gap-3 transition duration-300">
-                Mulai Sekarang
-                <div className="bg-white text-[#0052e0] p-1.5 rounded-full flex items-center justify-center">
-                  <ArrowRight className="w-3.5 h-3.5" />
-                </div>
+              <Button asChild className="bg-[#0052e0] hover:bg-[#0041b3] text-white rounded-full pl-6 pr-2 py-6 font-bold flex items-center gap-3 transition duration-300">
+                <Link href="/contact">
+                  Mulai Sekarang
+                  <div className="bg-white text-[#0052e0] p-1.5 rounded-full flex items-center justify-center inline-flex ml-2">
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </div>
+                </Link>
               </Button>
               
               <Button
+                asChild
                 variant="outline"
-                className="rounded-full pl-3 pr-6 py-6 font-bold border-slate-200 text-slate-700 hover:bg-slate-50 flex items-center gap-3 transition duration-300"
+                className="rounded-full pl-3 pr-6 py-6 font-bold border-slate-200 text-slate-700 hover:bg-slate-50 hover:text-black flex items-center gap-3 transition duration-300"
               >
-                <div className="bg-[#0052e0]/10 text-[#0052e0] p-2 rounded-full flex items-center justify-center">
-                  <Play className="w-3.5 h-3.5 fill-[#0052e0]" />
-                </div>
-                Lihat Portofolio
+                <Link href="/#portfolio">
+                  <div className="bg-[#0052e0]/10 text-[#0052e0] p-2 rounded-full flex items-center justify-center">
+                    <Play className="w-3.5 h-3.5 fill-[#0052e0]" />
+                  </div>
+                  Lihat Portofolio
+                </Link>
               </Button>
             </div>
 
