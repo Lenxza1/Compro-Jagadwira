@@ -20,7 +20,7 @@ export default function Header() {
         <div className="flex justify-between items-center">
           {/* Logo */}
           <Link href="/" className="flex items-center">
-            <Logo />
+            <Logo imageClassName="h-24 w-auto min-w-[280px] max-w-[420px] object-contain object-left sm:h-28 sm:min-w-[320px] sm:max-w-[480px] md:h-32 md:min-w-[360px] md:max-w-[540px]" />
           </Link>
 
           {/* Desktop Menu */}

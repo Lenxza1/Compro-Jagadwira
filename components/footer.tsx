@@ -15,7 +15,10 @@ export default function Footer() {
           {/* Company Info (4 cols) */}
           <div className="space-y-6 lg:col-span-4 flex flex-col items-start">
             <Link href="/" className="flex items-center">
-              <Logo lightText={true} />
+              <Logo
+                variant="dark"
+                imageClassName="h-24 w-auto min-w-[260px] max-w-[400px] object-contain object-left sm:h-28 sm:min-w-[300px] sm:max-w-[460px] md:h-32 md:min-w-[320px] md:max-w-[500px]"
+              />
             </Link>
             <p className="text-slate-400 text-sm font-medium leading-relaxed max-w-xs">
               Jagadwira Tech adalah penyedia solusi digital profesional untuk membantu bisnis Anda berkembang di era digital dengan teknologi terbaik.
