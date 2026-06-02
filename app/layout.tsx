@@ -11,8 +11,8 @@ export const metadata: Metadata = {
   description: 'Jagadwira menyediakan solusi digital profesional, modern, dan responsif untuk mengembangkan bisnis Anda. Layanan website, e-commerce, custom development, dan SEO optimization.',
   generator: 'v0.app',
   icons: {
-    icon: '/favicon-32x32.png',
-    apple: '/favicon-32x32.png',
+    icon: '/Light%20theme.png',
+    apple: '/Light%20theme.png',
   },
 }
 

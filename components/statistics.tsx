@@ -4,12 +4,14 @@ import { useEffect, useRef } from 'react';
 import Image from 'next/image';
 
 const clients = [
-  { name: 'Bank Indonesia', logo: '/Logo/Logo BI.png' },
-  { name: 'BRIN', logo: '/Logo/Logo BRIN.svg' },
-  { name: 'Elnusa', logo: '/Logo/Logo Elnusa.png' },
-  { name: 'Kemenkes', logo: '/Logo/Logo Kemenkes.png' },
-  { name: 'WIKA', logo: '/Logo/Logo WIKA.png' },
-  { name: 'Rumae', logo: '/Logo/logo-rumae.png' },
+  { name: 'Bank Indonesia', logo: '/Logo/Logo BI.png', square: false },
+  { name: 'BRIN', logo: '/Logo/Logo BRIN.svg', square: false },
+  { name: 'Elnusa', logo: '/Logo/Logo Elnusa.png', square: false },
+  { name: 'Kemenkes', logo: '/Logo/Logo Kemenkes Light.jpeg', square: false },
+  { name: 'WIKA', logo: '/Logo/Logo WIKA.png', square: false },
+  { name: 'Trans Dana Profitri', logo: '/Logo/TDP-1.png', square: true },
+  { name: 'Rumae', logo: '/Logo/logo-rumae.png', square: false },
+  { name: 'Mantra', logo: '/Logo/Mantra-1.png', square: true },
 ];
 
 function ClientLogo({ client }: { client: (typeof clients)[0] }) {
@@ -22,9 +24,13 @@ function ClientLogo({ client }: { client: (typeof clients)[0] }) {
       <Image
         src={client.logo}
         alt={client.name}
-        width={120}
-        height={48}
-        className="h-12 w-auto max-w-[140px] object-contain"
+        width={client.square ? 160 : 120}
+        height={client.square ? 80 : 48}
+        className={
+          client.square
+            ? 'h-20 w-auto object-contain'
+            : 'h-12 w-auto max-w-[140px] object-contain'
+        }
       />
     </div>
   );
