@@ -15,12 +15,19 @@ export default function Header() {
   const isContactActive = pathname === '/contact';
 
   return (
-    <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-100 shadow-sm">
-      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
-        <div className="flex justify-between items-center">
-          {/* Logo */}
-          <Link href="/" className="flex items-center">
-            <Logo imageClassName="h-24 w-auto min-w-[280px] max-w-[420px] object-contain object-left sm:h-28 sm:min-w-[320px] sm:max-w-[480px] md:h-32 md:min-w-[360px] md:max-w-[540px]" />
+    <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-100 shadow-sm overflow-visible">
+      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 overflow-visible">
+        <div className="flex justify-between items-center overflow-visible">
+          {/* Logo: fixed slot height so the bar stays compact; logo scales visually outside it */}
+          <Link
+            href="/"
+            className="relative block h-10 w-[10.5rem] shrink-0 sm:w-[12.5rem] md:w-[14.5rem] overflow-visible"
+            aria-label="Beranda"
+          >
+            <Logo
+              className="absolute left-0 top-1/2 -translate-y-1/2 pointer-events-none"
+              imageClassName="h-28 w-auto min-w-[300px] max-w-none object-contain object-left sm:h-32 sm:min-w-[340px] md:h-36 md:min-w-[380px]"
+            />
           </Link>
 
           {/* Desktop Menu */}
