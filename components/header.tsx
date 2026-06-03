@@ -44,7 +44,7 @@ export default function Header() {
             <Link href="/#services" className="hover:text-primary transition py-2">
               Layanan
             </Link>
-            <Link href="/#portfolio" className="hover:text-primary transition py-2">
+            <Link href="/portfolio" className="hover:text-primary transition py-2">
               Portofolio
             </Link>
             <Link 
