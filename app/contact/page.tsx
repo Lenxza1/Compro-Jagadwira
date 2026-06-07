@@ -26,6 +26,40 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 
+const Tiktok = (props: React.SVGProps<SVGSVGElement>) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    {...props}
+  >
+    <path d="M21 7.917v4.034a9.948 9.948 0 0 1 -5 -1.951v4.5a6.5 6.5 0 1 1 -8 -6.326v4.326a2.5 2.5 0 1 0 4 2v-11.5h4.083a6.005 6.005 0 0 0 4.917 4.917z" />
+  </svg>
+);
+
+const Threads = (props: React.SVGProps<SVGSVGElement>) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    {...props}
+  >
+    <path d="M19 7.5c-1.333 -3 -3.667 -4.5 -7 -4.5c-5 0 -8 2.5 -8 9s3.5 9 8 9s7 -3 7 -5s-1 -5 -7 -5c-2.5 0 -3 1.25 -3 2.5c0 1.5 1 2.5 2.5 2.5c2.5 0 3.5 -1.5 3.5 -5s-2 -4 -3 -4s-1.833 .333 -2.5 1" />
+  </svg>
+);
+
 export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: '',
@@ -35,7 +69,6 @@ export default function ContactPage() {
     message: ''
   });
   
-  const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [copiedText, setCopiedText] = useState<string | null>(null);
 
@@ -47,20 +80,28 @@ export default function ContactPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
-    
-    // Simulate API request
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setIsSubmitted(true);
-      setFormData({
-        name: '',
-        email: '',
-        service: 'Website Company Profile',
-        subject: '',
-        message: ''
-      });
-    }, 1500);
+
+    const subject = `[Kontak Website] ${formData.subject}`;
+    const body = [
+      `Nama: ${formData.name}`,
+      `Email: ${formData.email}`,
+      `Layanan: ${formData.service}`,
+      '',
+      'Pesan:',
+      formData.message,
+    ].join('\n');
+
+    const mailtoUrl = `mailto:jagadwiratech@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = mailtoUrl;
+
+    setIsSubmitted(true);
+    setFormData({
+      name: '',
+      email: '',
+      service: 'Website Company Profile',
+      subject: '',
+      message: '',
+    });
   };
 
   return (
@@ -114,13 +155,13 @@ export default function ContactPage() {
                       </div>
                       <div>
                         <span className="block text-xs font-semibold text-slate-400 uppercase tracking-wider">Telepon / WhatsApp</span>
-                        <Link href="tel:+6281316635670" className="text-sm sm:text-base font-bold text-slate-800 dark:text-slate-200 hover:text-primary transition">
-                          0813-1663-5670
+                        <Link href="tel:+6285716688814" className="text-sm sm:text-base font-bold text-slate-800 dark:text-slate-200 hover:text-primary transition">
+                          +62 857-1668-8814
                         </Link>
                       </div>
                     </div>
                     <button 
-                      onClick={() => handleCopy('0813-1663-5670', 'phone')}
+                      onClick={() => handleCopy('0857-1668-8814', 'phone')}
                       className="p-2 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition"
                       title="Salin nomor"
                     >
@@ -178,32 +219,31 @@ export default function ContactPage() {
                   <h4 className="text-sm font-bold text-slate-900 dark:text-white mb-4">Ikuti Media Sosial Kami</h4>
                   <div className="flex gap-3">
                     <Link 
-                      href="#" 
+                      href="https://www.instagram.com/jagadwiratech/" 
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="w-10 h-10 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200/30 dark:border-slate-800/40 flex items-center justify-center text-slate-500 dark:text-slate-400 hover:bg-[#0052e0] hover:text-white dark:hover:bg-primary transition duration-300"
                       aria-label="Instagram"
                     >
                       <Instagram className="w-5 h-5" />
                     </Link>
                     <Link 
-                      href="#" 
+                      href="https://www.tiktok.com/@jagadwiratech.id" 
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="w-10 h-10 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200/30 dark:border-slate-800/40 flex items-center justify-center text-slate-500 dark:text-slate-400 hover:bg-[#0052e0] hover:text-white dark:hover:bg-primary transition duration-300"
-                      aria-label="LinkedIn"
+                      aria-label="Tiktok"
                     >
-                      <Linkedin className="w-5 h-5" />
+                      <Tiktok className="w-5 h-5" />
                     </Link>
                     <Link 
-                      href="#" 
+                      href="https://www.threads.com/@jagadwiratech" 
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="w-10 h-10 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200/30 dark:border-slate-800/40 flex items-center justify-center text-slate-500 dark:text-slate-400 hover:bg-[#0052e0] hover:text-white dark:hover:bg-primary transition duration-300"
-                      aria-label="Facebook"
+                      aria-label="Threads"
                     >
-                      <Facebook className="w-5 h-5" />
-                    </Link>
-                    <Link 
-                      href="#" 
-                      className="w-10 h-10 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200/30 dark:border-slate-800/40 flex items-center justify-center text-slate-500 dark:text-slate-400 hover:bg-[#0052e0] hover:text-white dark:hover:bg-primary transition duration-300"
-                      aria-label="YouTube"
-                    >
-                      <Youtube className="w-5 h-5" />
+                      <Threads className="w-5 h-5" />
                     </Link>
                   </div>
                 </div>
@@ -248,9 +288,9 @@ export default function ContactPage() {
                       <CheckCircle2 className="w-8 h-8" />
                     </div>
                     <div className="space-y-2">
-                      <h3 className="text-2xl font-bold text-slate-900 dark:text-white">Pesan Terkirim!</h3>
+                      <h3 className="text-2xl font-bold text-slate-900 dark:text-white">Buka Aplikasi Email</h3>
                       <p className="text-slate-500 dark:text-slate-400 max-w-md mx-auto">
-                        Terima kasih telah menghubungi Jagadwira Tech. Tim kami akan segera meninjau pesan Anda dan membalasnya dalam 1x24 jam kerja.
+                        Klien email Anda telah dibuka dengan pesan yang sudah diisi. Silakan tekan kirim dari aplikasi email Anda untuk mengirim pesan ke Jagadwira Tech.
                       </p>
                     </div>
                     <Button 
@@ -347,20 +387,10 @@ export default function ContactPage() {
 
                     <Button 
                       type="submit" 
-                      disabled={isSubmitting}
                       className="w-full bg-[#0052e0] hover:bg-[#0041b3] text-white py-6 rounded-full font-bold transition duration-300 flex items-center justify-center gap-2 group"
                     >
-                      {isSubmitting ? (
-                        <>
-                          <span className="w-5 h-5 rounded-full border-2 border-white/30 border-t-white animate-spin" />
-                          Mengirim...
-                        </>
-                      ) : (
-                        <>
-                          Kirim Pesan
-                          <Send className="w-4 h-4 transition duration-300 group-hover:translate-x-1 group-hover:-translate-y-0.5" />
-                        </>
-                      )}
+                      Kirim Pesan
+                      <Send className="w-4 h-4 transition duration-300 group-hover:translate-x-1 group-hover:-translate-y-0.5" />
                     </Button>
                   </form>
                 )}

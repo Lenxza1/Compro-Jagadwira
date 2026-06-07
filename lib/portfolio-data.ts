@@ -44,6 +44,16 @@ export const portfolioProjects: PortfolioProject[] = [
     client: 'Bank Indonesia (BI), PT Elnusa Tbk, Badan Riset dan Inovasi Nasional (BRIN), PT. Trans Dana Profitri, Kementerian Kesehatan Republik Indonesia (Kemenkes)',
   },
   {
+    "slug": "wege-eng",
+    "title": "WEGE Engineering",
+    "category": "Website Engineering Management System",
+    "image": "Projects/Wika.png",
+    "description": "WEGE Engineering adalah sistem manajemen operasional engineering berbasis web yang dirancang untuk mendukung proses tender, site visit, workload karyawan, knowledge library, approval workflow, serta assessment kompetensi KUK. Aplikasi ini menyediakan   dashboard administrasi terpusat, import data dari Excel, ekspor laporan PDF, monitoring aktivitas, dan notifikasi approval melalui WhatsApp dengan short link serta autologin. Sistem ini membantu tim engineering mengelola data proyek, penugasan, evaluasi, dan proses persetujuan secara lebih terstruktur, efisien, dan terdokumentasi.",
+    "tags": [ "Laravel", "Filament", "Livewire", "Tailwind CSS", "MySQL"],
+    "year": "2025",
+    "client": "PT Wijaya Karya Bangunan Gedung Tbk (WEGE)"
+  },
+  {
     slug: 'customer-satisfaction-web',
     title: 'Portal Web Indeks Kepuasan Pelanggan',
     category: 'Website KPI & Dashboard',
