@@ -68,14 +68,14 @@ export default async function ProjectDetailPage({
       <Header />
 
       {/* ── Hero image ── */}
-      <div className="relative w-full h-[55vh] md:h-[65vh] mt-16 bg-slate-100">
+      <div className="relative w-full h-[55vh] md:h-[65vh] mt-16 bg-slate-950 md:bg-slate-100">
         <Image
           src={resolvePublicPath(project.image)}
           alt={project.title}
           fill
           priority
           sizes="100vw"
-          className="object-cover"
+          className="object-contain md:object-cover"
         />
         {/* Gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-slate-950/20 to-transparent" />

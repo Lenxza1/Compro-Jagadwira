@@ -80,13 +80,13 @@ function ProjectCard({ project, accentColor }: ProjectCardProps) {
       className="group cursor-pointer block overflow-hidden rounded-2xl bg-white border border-slate-100 hover:border-slate-200 hover:shadow-xl transition-all duration-300 h-full"
     >
       {/* Image */}
-      <div className="relative aspect-[4/3] bg-slate-100 overflow-hidden rounded-2xl">
+      <div className="relative aspect-[4/3] bg-slate-950 md:bg-slate-100 overflow-hidden rounded-2xl">
         <Image
           src={resolvePublicPath(project.image)}
           alt={project.title}
           fill
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-          className="object-cover group-hover:scale-105 transition-transform duration-500"
+          className="object-contain md:object-cover group-hover:scale-105 transition-transform duration-500"
         />
 
         {/* Badge */}
