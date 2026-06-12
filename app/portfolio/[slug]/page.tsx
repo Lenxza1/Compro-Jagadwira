@@ -7,6 +7,7 @@ import Header from '@/components/header';
 import Footer from '@/components/footer';
 import Portfolio from '@/components/portfolio';
 import { portfolioProjects } from '@/lib/portfolio-data';
+import { resolvePublicPath } from '@/lib/utils';
 
 // ─────────────────────────────────────────────
 //  Static params — tells Next.js which slugs exist
@@ -69,10 +70,11 @@ export default async function ProjectDetailPage({
       {/* ── Hero image ── */}
       <div className="relative w-full h-[55vh] md:h-[65vh] mt-16 bg-slate-100">
         <Image
-          src={project.image}
+          src={resolvePublicPath(project.image)}
           alt={project.title}
           fill
           priority
+          sizes="100vw"
           className="object-cover"
         />
         {/* Gradient overlay */}

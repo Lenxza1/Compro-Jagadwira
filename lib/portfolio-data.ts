@@ -36,7 +36,7 @@ export const portfolioProjects: PortfolioProject[] = [
     slug: 'hcmgo',
     title: 'HCMGO',
     category: 'Website Human Capital Management',
-    image: 'Projects/HCMGO.jpeg',
+    image: '/Projects/HCMGO.jpeg',
     description:
       'HCMGO adalah sistem manajemen sumber daya manusia terintegrasi yang dirancang untuk menyederhanakan dan mengotomatisasi proses HRD. Solusi ini mencakup manajemen data kepegawaian, pemantauan kinerja, hingga pengelolaan administrasi secara real-time. Dipercaya oleh berbagai instansi pemerintahan dan BUMN berskala besar, HCMGO terbukti skalabel, aman, dan mampu meningkatkan efisiensi operasional organisasi secara signifikan.',
     tags: ['Next.js', 'Tailwind CSS', 'Laravel', 'MySQL', 'Shadcn UI'],
@@ -47,7 +47,7 @@ export const portfolioProjects: PortfolioProject[] = [
     "slug": "wege-eng",
     "title": "WEGE Engineering",
     "category": "Website Engineering Management System",
-    "image": "Projects/Wika.png",
+    image: '/Projects/Wika.png',
     "description": "WEGE Engineering adalah sistem manajemen operasional engineering berbasis web yang dirancang untuk mendukung proses tender, site visit, workload karyawan, knowledge library, approval workflow, serta assessment kompetensi KUK. Aplikasi ini menyediakan   dashboard administrasi terpusat, import data dari Excel, ekspor laporan PDF, monitoring aktivitas, dan notifikasi approval melalui WhatsApp dengan short link serta autologin. Sistem ini membantu tim engineering mengelola data proyek, penugasan, evaluasi, dan proses persetujuan secara lebih terstruktur, efisien, dan terdokumentasi.",
     "tags": [ "Laravel", "Filament", "Livewire", "Tailwind CSS", "MySQL"],
     "year": "2025",
@@ -57,7 +57,7 @@ export const portfolioProjects: PortfolioProject[] = [
     slug: 'customer-satisfaction-web',
     title: 'Portal Web Indeks Kepuasan Pelanggan',
     category: 'Website KPI & Dashboard',
-    image: 'Projects/TDP PERFORMANCE REVIEW.png',
+    image: '/Projects/TDP PERFORMANCE REVIEW.png',
     description:
       'Sebuah platform digital interaktif yang dikembangkan untuk mengukur, melacak, dan menganalisis tingkat kepuasan pelanggan atau stakeholder. Web ini dilengkapi dengan fitur survei yang user-friendly, visualisasi data yang komprehensif, dan sistem pelaporan real-time untuk membantu manajemen mengambil keputusan yang berbasis data (data-driven decision making).',
     tags: ['Next.js', 'Laravel', 'MySQL', 'Tailwind CSS', 'Shadcn UI'],
@@ -68,7 +68,7 @@ export const portfolioProjects: PortfolioProject[] = [
     slug: 'mantra-rental-mobil',
     title: 'Mantra Rental Mobil',
     category: 'Website E-Commerce',
-    image: 'Projects/Mantra Mob.png',
+    image: '/Projects/Mantra Mob.png',
     description:
       'Platform manajemen bisnis terpadu yang khusus dikembangkan untuk kebutuhan industri penyewaan kendaraan. Sistem ini memfasilitasi proses booking (pemesanan), pelacakan ketersediaan armada, manajemen penjadwalan, hingga rekapan transaksi keuangan, sehingga operasional bisnis rental mobil menjadi lebih terstruktur dan transparan.',
     tags: ['Next.js'],
@@ -79,7 +79,7 @@ export const portfolioProjects: PortfolioProject[] = [
     slug: 'mantra-security-devices',
     title: 'Mantra Security Devices',
     category: 'Website E-Commerce',
-    image: 'Projects/Mantra Sec.png',
+    image: '/Projects/Mantra Sec.png',
     description:
       'Sebuah platform digital komprehensif yang dirancang khusus untuk memfasilitasi transaksi penjualan dan penyewaan berbagai perangkat keamanan (security devices). Sistem ini mengintegrasikan fitur katalog produk yang informatif, manajemen stok dan inventaris barang, pelacakan masa sewa secara otomatis, hingga alur pemesanan dan pembayaran yang efisien. Dengan sistem ini, pengelolaan operasional bisnis menjadi lebih terorganisir dan Sebuah platform digital komprehensif yang dirancang khusus untuk memfasilitasi transaksi penjualan dan penyewaan berbagai perangkat keamanan (security devices). Sistem ini mengintegrasikan fitur katalog produk yang informatif, manajemen stok dan inventaris barang, pelacakan masa sewa secara otomatis, hingga alur pemesanan dan pembayaran yang efisien. Dengan sistem ini, pengelolaan operasional bisnis menjadi lebih terorganisir dan memberikan pengalaman bertransaksi yang mudah bagi pelanggan dalam memenuhi kebutuhan perangkat keamanan mereka.',
     tags: ['Laravel', 'MySQL'],
@@ -90,7 +90,7 @@ export const portfolioProjects: PortfolioProject[] = [
     slug: 'anggara-treasure',
     title: 'Anggara Treasure',
     category: 'Landing Page',
-    image: 'Projects/Anggara Treasure.png',
+    image: '/Projects/Anggara Treasure.png',
     description:
       'Proyek pembuatan landing page profesional yang dirancang untuk merepresentasikan identitas merek Anggara secara elegan di dunia digital. Website ini dibangun dengan performa tinggi, waktu muat (loading time) yang cepat, serta tata letak informasi yang komunikatif untuk menarik minat calon pelanggan.',
     tags: ['Next.js', 'Tailwind CSS'],
@@ -101,7 +101,7 @@ export const portfolioProjects: PortfolioProject[] = [
     slug: 'rumae',
     title: 'Rumae',
     category: 'Landing Page',
-    image: 'Projects/Home Rumaé.png',
+    image: '/Projects/Home Rumaé.png',
     description:
       'Pengembangan halaman promosi digital (landing page) yang modern, estetis, dan sangat responsif. Didesain dengan mengedepankan prinsip UI/UX terbaik untuk memaksimalkan user experience, memperkuat brand awareness, dan dioptimalkan secara khusus untuk mendorong tingkat konversi pengunjung (SEO & Conversion Rate Optimization friendly).',
     tags: ['HTML', 'CSS'],

@@ -6,6 +6,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import useEmblaCarousel from 'embla-carousel-react';
 import { portfolioProjects } from '@/lib/portfolio-data';
+import { resolvePublicPath } from '@/lib/utils';
 
 // ─────────────────────────────────────────────
 //  Types
@@ -81,9 +82,10 @@ function ProjectCard({ project, accentColor }: ProjectCardProps) {
       {/* Image */}
       <div className="relative aspect-[4/3] bg-slate-100 overflow-hidden rounded-2xl">
         <Image
-          src={project.image}
+          src={resolvePublicPath(project.image)}
           alt={project.title}
           fill
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
           className="object-cover group-hover:scale-105 transition-transform duration-500"
         />
 
